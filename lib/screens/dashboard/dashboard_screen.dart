@@ -12,30 +12,31 @@ class DashboardScreen extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
-
           /// Sidebar
           Container(
             width: 220,
             color: AppColors.primary,
             child: Column(
-              children:  [
-
+              children: [
                 SizedBox(height: 40),
 
                 Text(
                   "WorkFlowPro",
                   style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
 
                 SizedBox(height: 30),
 
                 ListTile(
                   leading: Icon(Icons.dashboard, color: Colors.white),
-                  title: Text("Dashboard",
-                      style: TextStyle(color: Colors.white)),
+                  title: Text(
+                    "Dashboard",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
 
                 // ListTile(
@@ -44,45 +45,47 @@ class DashboardScreen extends StatelessWidget {
                 //       style: TextStyle(color: Colors.white)),
                 // ),
                 ListTile(
-  leading: Icon(Icons.folder, color: Colors.white),
-  title: Text("Projects", style: TextStyle(color: Colors.white)),
-  onTap: () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => ProjectScreen(),
-      ),
-    );
-  },
-),
-
-                ListTile(
-                  leading: Icon(Icons.task, color: Colors.white),
-                  title:
-                      Text("Tasks", style: TextStyle(color: Colors.white)),
-                onTap: () {
-  Navigator.push(
-    context,
-    MaterialPageRoute(
-      builder: (context) => const TaskBoardScreen(),
-    ),
-  );
-}
+                  leading: Icon(Icons.folder, color: Colors.white),
+                  title: Text(
+                    "Projects",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ProjectScreen()),
+                    );
+                  },
                 ),
 
                 ListTile(
-  leading: Icon(Icons.notifications, color: Colors.white),
-  title: Text("Notifications",
-      style: TextStyle(color: Colors.white)),
-  onTap: () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => NotificationScreen(),
-      ),
-    );
-  },
-),
+                  leading: Icon(Icons.task, color: Colors.white),
+                  title: Text("Tasks", style: TextStyle(color: Colors.white)),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const TaskBoardScreen(),
+                      ),
+                    );
+                  },
+                ),
+
+                ListTile(
+                  leading: Icon(Icons.notifications, color: Colors.white),
+                  title: Text(
+                    "Notifications",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => NotificationScreen(),
+                      ),
+                    );
+                  },
+                ),
               ],
             ),
           ),
@@ -91,7 +94,6 @@ class DashboardScreen extends StatelessWidget {
           Expanded(
             child: Column(
               children: [
-
                 /// Topbar
                 Container(
                   height: 60,
@@ -100,17 +102,15 @@ class DashboardScreen extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
-
                       Text(
                         "Dashboard",
                         style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold),
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
 
-                      CircleAvatar(
-                        child: Icon(Icons.person),
-                      )
+                      CircleAvatar(child: Icon(Icons.person)),
                     ],
                   ),
                 ),
@@ -126,10 +126,10 @@ class DashboardScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

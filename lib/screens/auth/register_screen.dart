@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:workflowpro/bloc/auth/auth_bloc.dart';
+import 'package:workflowpro/bloc/auth/auth_event.dart';
 import '../../core/colors.dart';
 import 'login_screen.dart';
 
@@ -79,7 +82,9 @@ class RegisterScreen extends StatelessWidget {
                 width: double.infinity,
                 height: 45,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.read<AuthBloc>().add(RegisterEvent(emailController.text, passwordController.text));
+                  },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: AppColors.primary),
                   child: const Text("Register"),
